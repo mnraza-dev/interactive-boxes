@@ -1,108 +1,85 @@
-/* ===================================
-   ROOT VARIABLES
-=================================== */
-:root {
-  --font-main: 'Inter', sans-serif;
-
-  --pink: #ff5b82;
-  --pink-light: #fff5f5;
-  --pink-dark: #e04f74;
-
-  --border: #ddd;
-  --border-light: #eee;
-  --line: #C8C8C8;
-
-  --text-dark: #21161b;
-  --text-light: #aaa;
-
-  --radius: 8px;
-  --radius-small: 6px;
-
-  --transition: 0.2s ease;
-}
-
-/* ===================================
+/* -----------------------------------
    GLOBAL
-=================================== */
+----------------------------------- */
 body {
-  font-family: var(--font-main);
+  font-family: 'Inter', sans-serif;
   background: #fff;
   display: flex;
   justify-content: center;
   padding: 50px;
 }
 
-/* ===================================
-   HEADING with left/right lines
-=================================== */
+/* -----------------------------------
+   Heading
+----------------------------------- */
 .bogo-container h2 {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   font-size: 20px;
-  color: var(--pink);
+  color: #ff5b82;
   margin: 20px 0;
 }
-
 .bogo-container h2::before,
 .bogo-container h2::after {
   content: "";
   flex: 1;
   height: 1px;
-  background: var(--line);
+  background: #C8C8C8;
 }
 
-/* ===================================
-   MAIN CONTAINER
-=================================== */
+/* -----------------------------------
+   CONTAINER
+----------------------------------- */
 .bogo-container {
   width: 380px;
-  border: 1px solid var(--border-light);
+  border: 1px solid #eee;
   padding: 20px;
-  border-radius: var(--radius);
+  border-radius: 8px;
   text-align: center;
 }
 
-/* ===================================
+.bogo-container h2 {
+  color: #ff5b82;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------
    PRODUCT OPTION CARD
-=================================== */
+----------------------------------- */
 .product-option {
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius);
-  padding: 12px 24px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  transition: var(--transition);
-  position: relative;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .product-option.active {
-  border-color: var(--pink);
+  border-color: #ff5b82;
   box-shadow: 0 0 8px rgba(255, 91, 130, 0.25);
 }
 
-/* ===================================
-   OPTION HEADER
-=================================== */
 .option-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 4px;
 }
-
 .discount {
-  background: var(--pink);
-  color: #fff;
+  background: #ff5b82;
+  color: white;
   font-size: 12px;
   padding: 2px 6px;
-  border-radius: var(--radius-small);
+  border-radius: 4px;
 }
 
-/* ===================================
+/* -----------------------------------
    PRICE SECTION
-=================================== */
+----------------------------------- */
 .price-section {
   display: flex;
   flex-direction: column;
@@ -116,41 +93,52 @@ body {
 
 .old-price {
   text-decoration: line-through;
-  color: var(--text-light);
-  font-size: 14px;
+  color: #aaa;
   margin-left: 5px;
+  font-size: 14px;
 }
 
-/* ===================================
+/* -----------------------------------
    MOST POPULAR TAG
-=================================== */
+----------------------------------- */
+.product-option {
+  position: relative;
+}
 .most-popular {
-  position: absolute;
-  top: -6px;
-  right: 4px;
-  background: var(--pink);
-  color: #fff;
-  font-size: 10px;
-  padding: 4px 8px;
-  border-radius: var(--radius-small);
+    position: absolute;
+    top: -6px;
+    right: 4px;
+    background: #ff5b82;
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
-/* ===================================
+/* -----------------------------------
    EXTRA OPTIONS
-=================================== */
+----------------------------------- */
 .extra-options {
   margin-top: 15px;
   display: none;
 }
 
-/* ===================================
+.extra-options select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* -----------------------------------
    FLEX TABLE (SIZE / COLOR)
-=================================== */
+----------------------------------- */
 .flex-table {
   display: flex;
   flex-direction: column;
   width: 100%;
-  border-radius: var(--radius-small);
+  border-radius: 6px;
 }
 
 .flex-row {
@@ -158,21 +146,31 @@ body {
   align-items: baseline;
 }
 
-.flex-cell {
-  flex: 1;
-  padding: 4px 8px;
-  display: flex;
-  align-items: center;
+.flex-row:last-child {
+  border-bottom: none;
 }
-
+.flex-cell {
+    flex: 1;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+}
 .flex-row.header {
   display: grid;
   grid-template-columns: 20px 1fr 1fr;
+} 
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 100px;
 }
-
-/* ===================================
-   RADIO BUTTON
-=================================== */
+.unit-discount-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+/* -----------------------------------
+   CUSTOM RADIO
+----------------------------------- */
 .custom-radio input {
   display: none;
 }
@@ -181,18 +179,18 @@ body {
   display: inline-block;
   width: 12px;
   height: 12px;
-  border: 2px solid var(--pink);
+  border: 2px solid #ff5b82;
   border-radius: 50%;
   margin-right: 5px;
   position: relative;
-  transition: var(--transition);
+  transition: 0.2s;
 }
 
 .custom-radio input:checked + .radio-mark::after {
   content: "";
   width: 7px;
   height: 7px;
-  background: var(--pink);
+  background: #ff5b82;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -200,31 +198,37 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* ===================================
+/* -----------------------------------
    CUSTOM SELECT
-=================================== */
+----------------------------------- */
 .custom-select {
   width: 100%;
   position: relative;
+  font-family: 'Inter', sans-serif;
   text-align: left;
-  font-family: var(--font-main);
+
+}
+
+.custom-select .selected,
+.custom-select .option {
+  text-align: left;
+  justify-content: flex-start;
 }
 
 .selected {
   background: #fff;
   padding: 12px;
-  border: 2px solid var(--border);
-  border-radius: var(--radius-small);
+  border: 2px solid #D9D9D9;
+  border-radius: 6px;
   cursor: pointer;
   position: relative;
-  text-align: left;
 }
 
 .selected::after {
   content: "▼";
   position: absolute;
   right: 12px;
-  color: var(--text-dark);
+  color: #21161b;
   font-size: 12px;
 }
 
@@ -233,9 +237,9 @@ body {
   top: 110%;
   left: 0;
   width: 100%;
-  background: #fff;
-  border: 2px solid var(--border);
-  border-radius: var(--radius-small);
+  background: white;
+  border: 2px solid #D9D9D9;
+  border-radius: 6px;
   display: none;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   z-index: 10;
@@ -247,36 +251,35 @@ body {
 }
 
 .options .option:hover {
-  background: var(--pink-light);
+  background: #fff5f5;
 }
 
-/* ===================================
-   FOOTER TOTAL + ADD BUTTON
-=================================== */
+/* -----------------------------------
+   TOTAL + BUTTON
+----------------------------------- */
 .total {
   margin-top: 10px;
   font-weight: bold;
-  color: var(--pink);
+  color: #ff5b82;
 }
 
 .add-cart-btn {
   margin-top: 15px;
-  background: var(--pink);
+  background: #ff5b82;
   color: white;
   padding: 12px;
   width: 100%;
   border: none;
-  border-radius: var(--radius);
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: var(--transition);
 }
 
 .add-cart-btn:hover {
-  background: var(--pink-dark);
+  background: #e04f74;
 }
 
-.footer-container {
+.footer-container{
   display: flex;
   justify-content: space-between;
   align-items: center;
