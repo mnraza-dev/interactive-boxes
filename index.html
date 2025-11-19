@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOGO Pricing</title>
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="bogo-container">
+    <h2>YAY! It’s BOGO</h2>
+
+    <!-- =============== OPTION 1 =============== -->
+    <div class="product-option" data-price="10" data-units="1">
+      <div class="option-header">
+        <div class="unit-discount-container">
+          <label class="custom-radio">
+            <input type="radio" name="unit">
+            <span class="radio-mark"></span>
+            1 Unit
+          </label>
+          <span class="discount">10% Off</span>
+        </div>
+        <div class="price-section">
+          <span class="price">$10.00 USD</span>
+          <span class="old-price">$24.00 USD</span>
+        </div>
+      </div>
+
+      <div class="extra-options">
+        <div class="grid">
+          <div class="flex-table">
+          
+            <div class="flex-row header">
+              <div class=""></div>
+
+              <div class="flex-cell">
+                Size
+              </div>
+
+              <div class="flex-cell">
+                Color
+              </div>
+            </div>
+            <div class="flex-row">
+              <div class="">#1</div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="options">
+                    <div class="option">S</div>
+                    <div class="option">M</div>
+                    <div class="option">L</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="options">
+                    <div class="option">Black</div>
+                    <div class="option">White</div>
+                    <div class="option">Red</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-row">
+              <div class="">#2</div>
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="options">
+                    <div class="option">S</div>
+                    <div class="option">M</div>
+                    <div class="option">L</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="selected">Colour</div>
+                  <div class="options">
+                    <div class="option">Black</div>
+                    <div class="option">White</div>
+                    <div class="option">Red</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =============== OPTION 2 (Most Popular) =============== -->
+    <div class="product-option active" data-price="18" data-units="2">
+      <div class="most-popular">MOST POPULAR</div>
+
+      <div class="option-header">
+        <div class="unit-discount-container">
+
+          <label class="custom-radio">
+            <input type="radio" name="unit" checked>
+            <span class="radio-mark"></span>
+            2 Unit
+          </label>
+
+          <span class="discount">20% Off</span>
+        </div>
+
+        <div class="price-section">
+          <span class="price">$18.00 USD</span>
+          <span class="old-price">$24.00 USD</span>
+        </div>
+      </div>
+
+      <div class="extra-options" style="display: block;">
+        <div class="grid">
+          <div class="flex-table">
+
+            <div class="flex-row header">
+              <div class="flex-cell"></div>
+              <div class="flex-cell">Size</div>
+              <div class="flex-cell">Colour</div>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="flex-row">
+              <div class="">#1</div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="selected">Select size</div>
+                  <div class="options">
+                    <div class="option">S</div>
+                    <div class="option">M</div>
+                    <div class="option">L</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="selected">Colour</div>
+                  <div class="options">
+                    <div class="option">Black</div>
+                    <div class="option">White</div>
+                    <div class="option">Red</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="flex-row">
+              <div class="">#2</div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="selected">Select size</div>
+                  <div class="options">
+                    <div class="option">S</div>
+                    <div class="option">M</div>
+                    <div class="option">L</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="selected">Colour</div>
+                  <div class="options">
+                    <div class="option">Black</div>
+                    <div class="option">White</div>
+                    <div class="option">Red</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- =============== OPTION 3 =============== -->
+    <div class="product-option" data-price="24" data-units="3">
+
+      <div class="option-header">
+        <div class="unit-discount-container">
+          <label class="custom-radio">
+            <input type="radio" name="unit">
+            <span class="radio-mark"></span>
+            3 Unit
+          </label>
+
+          <span class="discount">30% Off</span>
+        </div>
+        <div class="price-section">
+          <span class="price">$24.00 USD</span>
+          <span class="old-price">$24.00 USD</span>
+        </div>
+      </div>
+
+      <div class="extra-options">
+        <div class="grid">
+          <div class="flex-table">
+
+            <div class="flex-row header">
+              <div class="flex-cell"></div>
+              <div class="flex-cell">Size</div>
+              <div class="flex-cell">Colour</div>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="flex-row">
+              <div class="">#1</div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="options">
+                    <div class="option">S</div>
+                    <div class="option">M</div>
+                    <div class="option">L</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="options">
+                    <div class="option">Black</div>
+                    <div class="option">White</div>
+                    <div class="option">Red</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="flex-row">
+              <div class="">#2</div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="options">
+                    <div class="option">S</div>
+                    <div class="option">M</div>
+                    <div class="option">L</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-cell">
+                <div class="custom-select">
+                  <div class="options">
+                    <div class="option">Black</div>
+                    <div class="option">White</div>
+                    <div class="option">Red</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-container">
+      <div class="">Free Delivery</div>
+      <div class="total">Total : $18.00 USD</div>
+
+    </div>
+    <button class="add-cart-btn">+ Add to Cart</button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

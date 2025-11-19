@@ -1,0 +1,283 @@
+/* ===================================
+   ROOT VARIABLES
+=================================== */
+:root {
+  --font-main: 'Inter', sans-serif;
+
+  --pink: #ff5b82;
+  --pink-light: #fff5f5;
+  --pink-dark: #e04f74;
+
+  --border: #ddd;
+  --border-light: #eee;
+  --line: #C8C8C8;
+
+  --text-dark: #21161b;
+  --text-light: #aaa;
+
+  --radius: 8px;
+  --radius-small: 6px;
+
+  --transition: 0.2s ease;
+}
+
+/* ===================================
+   GLOBAL
+=================================== */
+body {
+  font-family: var(--font-main);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+/* ===================================
+   HEADING with left/right lines
+=================================== */
+.bogo-container h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 20px;
+  color: var(--pink);
+  margin: 20px 0;
+}
+
+.bogo-container h2::before,
+.bogo-container h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+.bogo-container {
+  width: 380px;
+  border: 1px solid var(--border-light);
+  padding: 20px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+/* ===================================
+   PRODUCT OPTION CARD
+=================================== */
+.product-option {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 12px 24px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+}
+
+.product-option.active {
+  border-color: var(--pink);
+  box-shadow: 0 0 8px rgba(255, 91, 130, 0.25);
+}
+
+/* ===================================
+   OPTION HEADER
+=================================== */
+.option-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 4px;
+}
+
+.discount {
+  background: var(--pink);
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: var(--radius-small);
+}
+
+/* ===================================
+   PRICE SECTION
+=================================== */
+.price-section {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--text-light);
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/* ===================================
+   MOST POPULAR TAG
+=================================== */
+.most-popular {
+  position: absolute;
+  top: -6px;
+  right: 4px;
+  background: var(--pink);
+  color: #fff;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: var(--radius-small);
+}
+
+/* ===================================
+   EXTRA OPTIONS
+=================================== */
+.extra-options {
+  margin-top: 15px;
+  display: none;
+}
+
+/* ===================================
+   FLEX TABLE (SIZE / COLOR)
+=================================== */
+.flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: var(--radius-small);
+}
+
+.flex-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.flex-cell {
+  flex: 1;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.flex-row.header {
+  display: grid;
+  grid-template-columns: 20px 1fr 1fr;
+}
+
+/* ===================================
+   RADIO BUTTON
+=================================== */
+.custom-radio input {
+  display: none;
+}
+
+.custom-radio .radio-mark {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--pink);
+  border-radius: 50%;
+  margin-right: 5px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.custom-radio input:checked + .radio-mark::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--pink);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ===================================
+   CUSTOM SELECT
+=================================== */
+.custom-select {
+  width: 100%;
+  position: relative;
+  text-align: left;
+  font-family: var(--font-main);
+}
+
+.selected {
+  background: #fff;
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+}
+
+.selected::after {
+  content: "▼";
+  position: absolute;
+  right: 12px;
+  color: var(--text-dark);
+  font-size: 12px;
+}
+
+.options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-small);
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.options .option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.options .option:hover {
+  background: var(--pink-light);
+}
+
+/* ===================================
+   FOOTER TOTAL + ADD BUTTON
+=================================== */
+.total {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--pink);
+}
+
+.add-cart-btn {
+  margin-top: 15px;
+  background: var(--pink);
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.add-cart-btn:hover {
+  background: var(--pink-dark);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
